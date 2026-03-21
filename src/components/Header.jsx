@@ -3,6 +3,8 @@ import {RxCross2, RxHamburgerMenu} from "react-icons/rx";
 import ButtonLight from "../shared/UI/ButtonLight.jsx";
 import ButtonDark from "../shared/UI/ButtonDark.jsx";
 import HeaderLink from "../shared/UI/HeaderLink.jsx";
+import {links} from "../pages/routes.jsx"
+import {NavLink} from "react-router/internal/react-server-client";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -18,16 +20,17 @@ const Header = () => {
 		setIsOpen(!isOpen)
 	}
 	
-	const links = ["Features", "Pricing", "About", "Blog", "Contact"]
 	
 	return (
 		<header
 			className={"lg:flex lg:items-center lg:justify-between"}>
 			<div className={"flex justify-between items-center"}>
-				<div className={"cursor-pointer"}>
-					<h3 className={"font-semibold text-lg"}>Astro<span
-						className={"text-gray-500 font-normal"}>ship</span></h3>
-				</div>
+				<NavLink to={"/"}>
+					<div className={"cursor-pointer"}>
+						<h3 className={"font-semibold text-lg"}>Astro<span
+							className={"text-gray-500 font-normal"}>ship</span></h3>
+					</div>
+				</NavLink>
 				{isOpen ? <RxCross2 onClick={toggleIsopen} className={"lg:hidden"}/>
 					: <RxHamburgerMenu onClick={toggleIsopen} className={"lg:hidden"}/>}
 			</div>

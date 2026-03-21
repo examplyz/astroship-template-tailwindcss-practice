@@ -1,13 +1,14 @@
 import {BrowserRouter, Routes, Route} from "react-router";
-import Main from "../pages/Main.jsx";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
+import {routes} from "../pages/routes.jsx";
 
 const RouterProvider = () => {
 	return <BrowserRouter>
 		<Header/>
 		<Routes>
-			<Route path="/" element={<Main/>}/>
+			{routes.map(route => <Route path={route.path}
+			                            element={route.element}/>)}
 		</Routes>
 		<Footer/>
 	</BrowserRouter>
