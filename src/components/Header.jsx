@@ -22,7 +22,7 @@ const Header = () => {
 	
 	return (
 		<header
-			className={"max-w-(--breakpoint-xl) mx-auto px-5 py-5 lg:flex lg:items-center lg:justify-between"}>
+			className={"lg:flex lg:items-center lg:justify-between"}>
 			<div className={"flex justify-between items-center"}>
 				<div className={"cursor-pointer"}>
 					<h3 className={"font-semibold text-lg"}>Astro<span
