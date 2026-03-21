@@ -1,16 +1,15 @@
 import React from "react";
 import {SiTicktick} from "react-icons/si";
 import {NavLink} from "react-router/internal/react-server-client";
+import PageHeadline from "../components/PageHeadline.jsx";
+
+const heading = "Pricing"
+const paragraph = "Simple & Predictable pricing. No Surprises."
 
 const PricingPage = () => {
 	return (
 		<div className={"mt-16"}>
-			<div className={"text-center"}>
-				<h2 className={"text-5xl font-semibold "}>Pricing</h2>
-				<p className={"mt-3 text-slate-600 text-lg"}>Simple & Predictable
-					pricing. No
-					Surprises.</p>
-			</div>
+			<PageHeadline heading={heading} paragraph={paragraph}/>
 			<div
 				className={"mb-16 auto-rows-fr grid grid-cols-1 lg:grid-cols-3 gap-16 mt-12 max-w-(--breakpoint-lg) mx-auto"}>
 				<div
