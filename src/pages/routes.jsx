@@ -1,5 +1,6 @@
 import Main from "./Main.jsx";
 import PricingPage from "./PricingPage.jsx";
+import ContactPage from "./ContactPage.jsx";
 
 const routes = [{
 	element: <Main/>,
@@ -8,6 +9,10 @@ const routes = [{
 	{
 		element: <PricingPage/>,
 		path: "/pricing"
+	},
+	{
+		element: <ContactPage/>,
+		path: "/contact"
 	},]
 const links = ["Features", "Pricing", "About", "Blog", "Contact"]
 
